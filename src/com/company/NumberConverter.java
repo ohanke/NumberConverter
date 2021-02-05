@@ -10,7 +10,7 @@ public class NumberConverter {
         printConvertingOptions();
 
         while(true){
-            System.out.println("In which numerical system will the input be? (2-16): ");
+            System.out.println("In which numeral system will the input be? (2-16): ");
             int numeralSystem = scanner.nextInt();
             scanner.nextLine();
             if (numeralSystem == 1){
@@ -22,13 +22,13 @@ public class NumberConverter {
 
             int number = convertToDecimalNumber(input, numeralSystem, chars);
 
-            System.out.println("Convert it to which numerical system? (2-16): ");
+            System.out.println("Convert it to which numeral system? (2-16): ");
             numeralSystem = scanner.nextInt();
             if (numeralSystem == 1){
                 System.out.println("Exiting program.");
                 break;
             }
-            System.out.println(convertDecimalNumber(number, numeralSystem, chars));
+            System.out.println("Converted number: " + convertDecimalNumber(number, numeralSystem, chars));
         }
     }
 
