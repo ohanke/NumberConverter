@@ -2,20 +2,19 @@ package com.company;
 
 import java.util.Scanner;
 
-public class DecimalNumberConverter {
+public class NumberConverter {
     public static void main(String[] args) {
         char [] chars = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         Scanner scanner = new Scanner(System.in);
         System.out.println("Number Converter: ");
-
         printConvertingOptions();
-        boolean convert = true;
-        while(convert){
+
+        while(true){
             System.out.println("In which numerical system will the input be? (2-16): ");
             int numeralSystem = scanner.nextInt();
             scanner.nextLine();
             if (numeralSystem == 1){
-                convert = false;
+                System.out.println("Exiting program.");
                 break;
             }
             System.out.println("Enter a value: ");
@@ -26,7 +25,7 @@ public class DecimalNumberConverter {
             System.out.println("Convert it to which numerical system? (2-16): ");
             numeralSystem = scanner.nextInt();
             if (numeralSystem == 1){
-                convert = false;
+                System.out.println("Exiting program.");
                 break;
             }
             System.out.println(convertDecimalNumber(number, numeralSystem, chars));
